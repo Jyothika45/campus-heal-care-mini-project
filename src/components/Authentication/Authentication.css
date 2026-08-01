@@ -1,0 +1,254 @@
+/* Campus Health Care - Authentication Styling */
+:root {
+  --chc-primary: #0284c7;
+  --chc-primary-dark: #0369a1;
+  --chc-primary-light: #e0f2fe;
+  --chc-secondary: #0f172a;
+  --chc-accent: #38bdf8;
+  --chc-bg: #f0f7ff;
+  --chc-card-bg: #ffffff;
+  --chc-text-main: #1e293b;
+  --chc-text-muted: #64748b;
+  --chc-border: #e2e8f0;
+  --chc-shadow: 0 20px 25px -5px rgba(2, 132, 199, 0.1), 0 8px 10px -6px rgba(2, 132, 199, 0.05);
+}
+
+.auth-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f7ff 50%, #ffffff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.auth-card {
+  background: var(--chc-card-bg);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 20px;
+  box-shadow: var(--chc-shadow);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.auth-banner {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+.auth-banner::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.auth-banner::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.auth-logo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.auth-form-section {
+  padding: 2.5rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .auth-form-section {
+    padding: 1.75rem 1.25rem;
+  }
+  .auth-banner {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.auth-title {
+  font-weight: 700;
+  color: var(--chc-text-main);
+  margin-bottom: 0.25rem;
+}
+
+.auth-subtitle {
+  color: var(--chc-text-muted);
+  font-size: 0.925rem;
+  margin-bottom: 1.75rem;
+}
+
+.role-tab-group {
+  display: flex;
+  background: #f1f5f9;
+  padding: 4px;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.role-tab-btn {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 8px 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--chc-text-muted);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.role-tab-btn.active {
+  background: #ffffff;
+  color: var(--chc-primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.form-floating-custom {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.form-floating-custom .form-control,
+.form-floating-custom .form-select {
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-floating-custom .form-control:focus,
+.form-floating-custom .form-select:focus {
+  border-color: var(--chc-primary);
+  box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.15);
+}
+
+.password-input-group {
+  position: relative;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--chc-text-muted);
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.password-toggle-btn:hover {
+  color: var(--chc-primary);
+}
+
+.btn-chc-primary {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.85rem 1.5rem;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 6px -1px rgba(2, 132, 199, 0.2);
+  transition: all 0.2s ease;
+}
+
+.btn-chc-primary:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+  box-shadow: 0 6px 12px -2px rgba(2, 132, 199, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-chc-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.otp-box-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.otp-input-field {
+  width: 50px;
+  height: 55px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 10px;
+  border: 2px solid #cbd5e1;
+  background: #ffffff;
+  color: var(--chc-primary-dark);
+  transition: all 0.2s ease;
+}
+
+.otp-input-field:focus {
+  border-color: var(--chc-primary);
+  box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.15);
+  outline: none;
+}
+
+.health-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.health-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.health-feature-icon {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-footer-link {
+  color: var(--chc-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-footer-link:hover {
+  text-decoration: underline;
+  color: var(--chc-primary-dark);
+}
